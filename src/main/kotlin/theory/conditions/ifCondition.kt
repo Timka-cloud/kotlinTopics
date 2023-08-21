@@ -1,7 +1,7 @@
 package theory.conditions
 
 fun main() {
-    var a = 10
+    var a = 30
     var b = 20
     var text = "hello"
 
@@ -30,7 +30,7 @@ fun main() {
 
     print("4 -----------------------------------------")
     // Присвоение значения в результате выполнения условия
-    var result = if(a < b) {
+    val result = if(a < b) {
         "a less than b"
     } else if(a == b) {
         "a equal to b"
@@ -38,10 +38,30 @@ fun main() {
         "a bigger than b"
     }
 
+    val result2: String
+
+    if(a < b) {
+        result2 = "a less than b"
+    } else if(a == b) {
+        result2 = "a equal to b"
+    } else {
+        result2 = "a bigger than b"
+    }
+
     println("result = $result")
+    println("result2 = $result2")
 
 
-
+    println("----------------6") // любой тип можно туда записать
+    val res:Any = if(a < b) {
+        var t: Int = 10
+        t
+    } else if(a == b) {
+        "just text return"
+    } else {
+        true
+    }
+    println("res = $res")
 
 
 }

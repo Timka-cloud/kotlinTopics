@@ -7,6 +7,7 @@ fun main() {
      */
 
     var a = 10
+    var b = 20
 
     var text = "sample"
 
@@ -42,7 +43,7 @@ fun main() {
     }
 
     println("4 -------------------------")
-    var result = when(a) {
+    var result: String = when(a) {
         in 0..10 -> {
             var r = 10
             r += 10 // some logic
@@ -60,5 +61,20 @@ fun main() {
         }
     }
 
+
     println("result =  $result")
+
+    println("5-------------")
+    when {
+        a < b -> {
+            println("a less than b")
+        }
+        a == b -> {
+            println("a equal to b")
+        }
+        else -> {
+            println("a bigger than b")
+        }
+    }
+
 }

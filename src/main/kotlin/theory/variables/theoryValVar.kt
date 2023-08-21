@@ -2,7 +2,8 @@ package theory.variables
 
 var textVar: String = "var value" // явное указание типа и значения
 var digitVar = 1 // явное указание значения, (тип автоматически становится Int, Alt + колесико мыши чтобы посмотреть тип)
-// var notInitVar: Int // нужно инициализоровать значение обязательно
+//var notInitVar: Int // нужно инициализоровать значение обязательно
+// в методах можно сразу не указывать значение
 
 
 val textVal: String  = "val value" // это константа
@@ -19,7 +20,7 @@ fun main() {
     println(textVar)
     println(textVal)
     textVar = "Alex"
-   // textVal = "Damn" // error, it's constant value
+    //textVal = "Damn" // error, it's constant value
     println(textVar)
     println(textVal)
 
@@ -72,14 +73,14 @@ https://kotlinlang.org/docs/basic-syntax.html#variables
 
 // --------------------------------------------------
 
-
+// lateinit не используются с примитивами
 lateinit var name: String // если позже не задать значение будет ошибка UninitializedPropertyAccessException
 //lateinit var name2: String = "test" // нельзя писать, бессмысленно так как сразу задаем значение
 //const var dig = 1 // not allowed
 
 const val constDigit1 = 5; // const добавляется тогда, когда константа имеет фиксированное значение и не
 // зависит от других переменных
-const val constDigit2 = constDigit1
+const val constDigit2 = constDigit1 // можно присваивать другие const val
 val digit = 4
 // const val constDigit3 = digit // error
 

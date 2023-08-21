@@ -30,7 +30,7 @@ fun main() {
     var length = calcTextLength(text = "test")
     println("length: $length")
 
-    var finalText = concatText(text1 = "hi", text2 = "hello")
+    var finalText: String = concatText(text1 = "hi", text2 = "hello")
     println(finalText)
 
     println(multiply(a = 10, b = 30))

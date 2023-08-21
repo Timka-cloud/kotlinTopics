@@ -35,3 +35,36 @@ open class House(name: String,  height: Int, var address: String) : Building(nam
         println("${super.name} $name  ${super.height} $height")
     }
 }
+
+
+open class Animal {
+
+    private var name: String
+    private var weight: Int
+
+    constructor(name: String, weight: Int) {
+        this.name = name
+        this.weight = weight
+    }
+}
+//ПК -> ВК
+open class Cat (name: String, weight: Int) : Animal(name, weight) {
+
+}
+// ВК -> ПК
+open class ChildCat : Cat {
+    var age: Int = 0
+
+    constructor(name: String, weight: Int, age: Int) : super(name, weight) {
+        this.age = age
+    }
+}
+
+//ВК -> ВК
+open class Horse : Animal {
+    var age: Int = 0
+
+    constructor(name: String, weight: Int, age: Int) : super(name, weight) {
+        this.age = age
+    }
+}
